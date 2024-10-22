@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./pages/Header";
+import Priority from "./pages/Priority";
+import User from "./pages/User";
+import Status from "./pages/Status";
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState("Status"); // Default page
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "Status":
+        return <Status />;
+      case "Priority":
+        return <Priority />;
+      case "User":
+        return <User />;
+      default:
+        return <Status />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header setCurrentPage={setCurrentPage} />
+      {renderPage()}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,107 @@
+.priority-container {
+  background-color: #f6f6f6;
+  min-height: 100vh; /* Full height */
+  margin-top: 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.priority-item {
+  padding: 10px;
+}
+
+.priority-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.priority-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.priority-item li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.priority-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+.task-item .custom-checkbox {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  border-radius: 50%; /* Make it circular */
+  border: 2px solid #ccc; /* Border color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-item .custom-checkbox.checked {
+  background-color: #4caf50; /* Green background */
+  border-color: #4caf50; /* Green border */
+}
+
+.task-item .custom-checkbox.checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white; /* Inner circle white */
+}
+
+/* New styles for blue tick */
+.task-item .custom-checkbox.checked {
+  background-color: #2196f3; /* Blue background */
+  border-color: #2196f3; /* Blue border */
+}
+
+.task-item .custom-checkbox.checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
