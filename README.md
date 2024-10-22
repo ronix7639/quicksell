@@ -1,7 +1,7 @@
 
 ### Deployment
 
-This section has moved here: [https://quicksell-two-plum.vercel.app/](https://quicksell-two-plum.vercel.app/)
+This deployed link is here: [https://quicksell-two-plum.vercel.app/](https://quicksell-two-plum.vercel.app/)
 
 ### `npm start`
 
